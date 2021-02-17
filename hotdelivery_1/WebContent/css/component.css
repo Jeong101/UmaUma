@@ -1,0 +1,270 @@
+
+/* Needed for a fluid height: */
+.container{
+	width: 80%;
+	height: 65%;
+	margin-left: 10%;
+  margin-right: 10%;
+	background-color:gray;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+}
+
+/* main wrapper */
+.contentslider {
+	width: 100%;
+	height: 100%;
+	margin: 1em auto;
+	position: relative;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+
+}
+
+.contentslider > ul {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.contentslider > ul li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 0;
+	background: #fff;
+}
+
+/* Whithout JS, we use :target */
+.contentslider > ul li:target {
+	z-index: 100;
+}
+
+.contentslider .prenext {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3.313em;
+	z-index: 1000;
+	border-top: 4px solid #47a3da;
+	overflow: hidden;
+}
+
+.contentslider .prenext a {
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	/* color: #211d1d; */
+	/* background: #fff; */
+	/* outline: none; */
+	text-align: center;
+	line-height: 3;
+	position: relative;
+	padding-left: 3.125em;
+	text-transform: uppercase;
+	border-right: 4px solid #47a3da;
+	/* -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; */
+
+	transform: translate(-50%, 0);
+  color: white;
+  background: #e60000;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.contentslider .prenext a span {
+	display: block;
+}
+
+.contentslider .prenext a:last-child {
+	border: none;
+	box-shadow: 1px 0 #47a3da; /* fills gap caused by rounding */
+}
+
+.contentslider .prenext a:hover {
+	background-color: #ff5252;
+	color: #fff;
+}
+
+.contentslider .prenext a.rc-active {
+	background-color: #47a3da;
+	color: #fff;
+}
+
+/* Iconfont for .prenextigation and headings */
+/* .contentslider [class^="icon-"]:before,
+.contentslider [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	text-align: center;
+	speak: none;
+	font-weight: normal;
+	line-height: 2.5;
+	font-size: 2em;
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	margin: -1.250em 0 0 0;
+	height: 2.500em;
+	width: 2.500em;
+	color: rgba(0,0,0,0.1);
+	-webkit-font-smoothing: antialiased;
+}
+
+.contentslider .icon-wolf:before {
+	content: "\56";
+}
+
+.contentslider .icon-rabbit:before {
+	content: "\52";
+}
+
+.contentslider .icon-turtle:before {
+	content: "\54";
+}
+
+.contentslider .icon-platypus:before {
+	content: "\42";
+}
+
+.contentslider .icon-aligator:before {
+	content: "\41";
+}
+
+.contentslider [class^="icon-"].rc-active:before,
+.contentslider [class*=" icon-"].rc-active:before,
+.contentslider .prenext a:hover:before {
+	color: rgba(255,255,255,0.9);
+} */
+
+.contentslider h3 {
+	font-size: 2.5em;
+	height: 2em;
+	line-height: 1.7;
+	font-weight: 300;
+	background: #e60000;
+  padding: 0 20px;
+  color: white;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+/* .contentslider h3[class^="icon-"]:before,
+.contentslider h3[class*=" icon-"]:before {
+	top: 0;
+	left: 0;
+	width: 2em;
+	line-height: 1;
+	height: 1.2em;
+	margin: 0;
+	color: #47a3da;
+} */
+
+.contentslider li > div {
+	position: absolute;
+	top: 9em;
+	bottom: 3.313em;
+	width: 100%;
+	left: 0;
+	padding: 0 1em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.contentslider .content {
+	-webkit-column-rule: 1px dashed #47a3da;
+	-moz-column-rule: 1px dashed #47a3da;
+	column-rule: 1px dashed #47a3da;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	-o-column-gap: 1em;
+	column-gap: 1em;
+	vertical-align: top;
+	padding: 1em 0;
+}
+
+.contentslider p {
+	color: #47a3da;
+	padding: 0 0.5em 0.4em;
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: 300;
+	text-align: justify;
+	line-height: 1.6;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 70em) {
+	.contentslider p {
+		font-size: 100%;
+	}
+}
+
+@media screen and (max-width: 67.75em) {
+
+	.contentslider { font-size: 85%; }
+
+	/* .contentslider .prenext a[class^="icon-"]:before,
+	.contentslider .prenext a[class*=" icon-"]:before {
+		left: 50%;
+		margin-left: -1.250em;
+	} */
+
+	.contentslider .prenext a span {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 43em) {
+
+	.contentslider h3 {
+		font-size: 2em;
+	}
+
+	.contentslider .content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+
+	.contentslider li > div {
+		top: 5em;
+	}
+
+}
+
+@media screen and (max-width: 25em) {
+	.contentslider .prenext a { padding: 0;}
+	/* .contentslider h3[class^="icon-"]:before,
+	.contentslider h3[class*=" icon-"]:before { display: none;} */
+}
