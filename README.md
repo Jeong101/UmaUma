@@ -1,5 +1,9 @@
-# UmaUma 
-포토폴리오
-jsp/servlet/jdbc
-참가인원:4명
-맡은 부분 : worldcup.-,member.-
+# Hot Delivery
+## 서비스 소개
+- 음식주문페이지
+- 음식이상형월드컵
+  * DB에 저장된 음식들로 이상형월드컵
+- 회원가입
+  * 회원가입시 회원종류(점주,일반)에 따라 메뉴를 다르게 표시
+## 사용기술
+- Java,jsp,servlet,oracle
